@@ -1,0 +1,21 @@
+{
+    "architectures": {
+        "activations": [],
+        "normalizations": [],
+        "transformers": []
+    },
+    "regularization": {
+        "augmentation": {
+            "mixed-sampling": [],
+            "automatic": []
+        },
+        "intermediate-layer": []
+    },
+    "contrastive-learning": [],
+    "weak-supervision": [],
+    "segmentation": {
+        "instance": [],
+        "semantic": []
+    },
+    "no-category": []
+}
