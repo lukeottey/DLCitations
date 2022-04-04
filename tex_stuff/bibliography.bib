@@ -4,7 +4,7 @@
   journal={ArXiv},
   year={2020},
   volume={abs/2002.05709},
-  keywords={contrastive-learning,regularization::augmentation}
+  keywords={cl,reg::aug,reg::con}
 }
 
 @article{Khoreva2017SimpleDI,
@@ -13,7 +13,7 @@
   journal={2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2017},
   pages={1665-1674},
-  keywords={segmentation,weak-supervision} 
+  keywords={od::seg,wsl} 
 }
 
 @article{Ahn2019WeaklySL,
@@ -22,7 +22,7 @@
   journal={2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2019},
   pages={2204-2213},
-  keywords={segmentation,weak-supervision}
+  keywords={od::seg,wsl}
 }
 @article{Ranftl2021VisionTF,
   title={Vision Transformers for Dense Prediction},
@@ -30,74 +30,84 @@
   journal={2021 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2021},
   pages={12159-12168},
-  keywords={architectures,architectures::transformers}
+  keywords={arch::tr}
 }
 @inproceedings{Tang2018WeaklySR,
   title={Weakly Supervised Region Proposal Network and Object Detection},
   author={Peng Tang and Xinggang Wang and Angtian Wang and Yongluan Yan and Wenyu Liu and Junzhou Huang and Alan Loddon Yuille},
   booktitle={ECCV},
-  year={2018}
+  year={2018},
+  keywords={wsl,od}
 }
 @inproceedings{Salimans2016WeightNA,
   title={Weight Normalization: A Simple Reparameterization to Accelerate Training of Deep Neural Networks},
   author={Tim Salimans and Diederik P. Kingma},
   booktitle={NIPS},
-  year={2016}
+  year={2016},
+  keywords={arch::norm::weight normalization}
 }
 @article{Tian2020WhatMF,
   title={What makes for good views for contrastive learning},
   author={Yonglong Tian and Chen Sun and Ben Poole and Dilip Krishnan and Cordelia Schmid and Phillip Isola},
   journal={ArXiv},
   year={2020},
-  volume={abs/2005.10243}
+  volume={abs/2005.10243},
+  keywords={cl,reg::aug}
 }
 @inproceedings{Mller2019WhenDL,
   title={When Does Label Smoothing Help?},
   author={Rafael M{\"u}ller and Simon Kornblith and Geoffrey E. Hinton},
   booktitle={NeurIPS},
-  year={2019}
+  year={2019},
+  keywords={reg}
 }
 @article{Neyshabur2020WhatIB,
   title={What is being transferred in transfer learning?},
   author={Behnam Neyshabur and Hanie Sedghi and Chiyuan Zhang},
   journal={ArXiv},
   year={2020},
-  volume={abs/2008.11687}
+  volume={abs/2008.11687},
+  keywords={tl}
 }
 @article{Chollet2017XceptionDL,
   title={Xception: Deep Learning with Depthwise Separable Convolutions},
   author={François Chollet},
   journal={2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2017},
-  pages={1800-1807}
+  pages={1800-1807},
+  keywords={arch::building blocks::inception-style}
 }
 @article{Bolya2019YOLACTRI,
   title={YOLACT: Real-Time Instance Segmentation},
   author={Daniel Bolya and Chong Zhou and Fanyi Xiao and Yong Jae Lee},
   journal={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2019},
-  pages={9156-9165}
+  pages={9156-9165},
+  keywords={od::det::one-stage::yolo,od::seg::instance}
 }
 @article{Ge2021YOLOXEY,
   title={YOLOX: Exceeding YOLO Series in 2021},
   author={Zheng Ge and Songtao Liu and Feng Wang and Zeming Li and Jian Sun},
   journal={ArXiv},
   year={2021},
-  volume={abs/2107.08430}
+  volume={abs/2107.08430},
+  keywords={od::det::one-stage::yolo}
 }
 @article{Chen2021YouOL,
   title={You Only Look One-level Feature},
   author={Qiang Chen and Yingming Wang and Tong Yang and X. Zhang and Jian Cheng and Jian Sun},
   journal={2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2021},
-  pages={13034-13043}
+  pages={13034-13043},
+  keywords={od::det::one-stage::yolo}
 }
 @article{Huang2021PPYOLOv2AP,
   title={PP-YOLOv2: A Practical Object Detector},
   author={Xin Huang and Xinxin Wang and Wenyu Lv and Xiaying Bai and Xiang Long and Kaipeng Deng and Qingqing Dang and Shumin Han and Qiwen Liu and Xiaoguang Hu and Dianhai Yu and Yanjun Ma and Osamu Yoshie},
   journal={ArXiv},
   year={2021},
-  volume={abs/2104.10419}
+  volume={abs/2104.10419},
+  keywords={od::det::one-stage::yolo}
 }
 @article{Xian2019ZeroShotLC,
   title={Zero-Shot Learning—A Comprehensive Evaluation of the Good, the Bad and the Ugly},
@@ -105,34 +115,39 @@
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2019},
   volume={41},
-  pages={2251-2265}
+  pages={2251-2265},
+  keywords={xsl::zsl}
 }
 @inproceedings{Song2017DepthCF,
   title={Depth CNNs for RGB-D Scene Recognition: Learning from Scratch Better than Transferring from RGB-CNNs},
   author={Xinhang Song and Luis Herranz and Shuqiang Jiang},
   booktitle={AAAI},
-  year={2017}
+  year={2017},
+  keywords={od::applied}
 }
 @article{Zeng2019WSOD2LB,
   title={WSOD2: Learning Bottom-Up and Top-Down Objectness Distillation for Weakly-Supervised Object Detection},
   author={Zhaoyang Zeng and Bei Liu and Jianlong Fu and Hongyang Chao and Lei Zhang},
   journal={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2019},
-  pages={8291-8299}
+  pages={8291-8299},
+  keywords={od::wsl,reg::kd}
 }
 @article{Huang2020ComprehensiveAS,
   title={Comprehensive Attention Self-Distillation for Weakly-Supervised Object Detection},
   author={Zeyi Huang and Yang Zou and B. V. K. Vijaya Kumar and Dong Huang},
   journal={ArXiv},
   year={2020},
-  volume={abs/2010.12023}
+  volume={abs/2010.12023},
+  keywords={od::wsl,reg::kd}
 }
 @article{Chen2021RobustAA,
   title={Robust and Accurate Object Detection via Adversarial Learning},
   author={Xiangning Chen and Cihang Xie and Mingxing Tan and Li Zhang and Cho-Jui Hsieh and Boqing Gong},
   journal={2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2021},
-  pages={16617-16626}
+  pages={16617-16626},
+  keywords={od,adv}
 }
 @article{Das2011DifferentialEA,
   title={Differential Evolution: A Survey of the State-of-the-Art},
@@ -140,7 +155,8 @@
   journal={IEEE Transactions on Evolutionary Computation},
   year={2011},
   volume={15},
-  pages={4-31}
+  pages={4-31},
+  keywords={de}
 }
 @article{Storn1997DifferentialE,
   title={Differential Evolution – A Simple and Efficient Heuristic for global Optimization over Continuous Spaces},
@@ -148,24 +164,28 @@
   journal={Journal of Global Optimization},
   year={1997},
   volume={11},
-  pages={341-359}
+  pages={341-359},
+  keywords={de}
 }
 @inproceedings{Lee2013PseudoLabelT,
   title={Pseudo-Label : The Simple and Efficient Semi-Supervised Learning Method for Deep Neural Networks},
   author={Dong-Hyun Lee},
-  year={2013}
+  year={2013},
+  keywords={ssl::pseudo}
 }
 @inproceedings{Liu2022ACF,
   title={A ConvNet for the 2020s},
   author={Zhuang Liu and Hanzi Mao and Chaozheng Wu and Christoph Feichtenhofer and Trevor Darrell and Saining Xie},
-  year={2022}
+  year={2022},
+  keywords={arch::other layers}
 }
 @article{Sun2021LoFTRDL,
   title={LoFTR: Detector-Free Local Feature Matching with Transformers},
   author={Jiaming Sun and Zehong Shen and Yuang Wang and Hujun Bao and Xiaowei Zhou},
   journal={2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2021},
-  pages={8918-8927}
+  pages={8918-8927},
+  keywords={arch::tr,llvp::feature matching}
 }
 @article{Wold1987PrincipalCA,
   title={Principal component analysis},
@@ -173,7 +193,8 @@
   journal={Chemometrics and Intelligent Laboratory Systems},
   year={1987},
   volume={2},
-  pages={37-52}
+  pages={37-52},
+  keywords={stat}
 }
 @article{Reed2021torchfxPP,
   title={torch.fx: Practical Program Capture and Transformation for Deep Learning in Python},
@@ -201,7 +222,8 @@
   author={Xinlei Chen and Ross B. Girshick and Kaiming He and Piotr Doll{\'a}r},
   journal={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2019},
-  pages={2061-2069}
+  pages={2061-2069},
+  keywords={od::seg}
 }
 @article{Berman2018TheLL,
   title={The Lovasz-Softmax Loss: A Tractable Surrogate for the Optimization of the Intersection-Over-Union Measure in Neural Networks},
@@ -221,7 +243,8 @@
   title={Transformers in Vision: A Survey},
   author={Salman Hameed Khan and Muzammal Naseer and Munawar Hayat and Syed Waqas Zamir and Fahad Shahbaz Khan and Mubarak Shah},
   journal={ACM Computing Surveys (CSUR)},
-  year={2022}
+  year={2022},
+  keywords={arch::tr}
 }
 @article{Mller2021TrivialAugmentTY,
   title={TrivialAugment: Tuning-free Yet State-of-the-Art Data Augmentation},

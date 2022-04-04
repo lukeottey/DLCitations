@@ -1,21 +1,82 @@
 {
     "architectures": {
+        "first deep CNNs": [],
+        "building blocks": {
+            "residual connections": [],
+            "dense connections": [],
+            "inception-style": [],
+            "drop-in and add-on components": []
+        },
+        "model-scaling": [],
         "activations": [],
-        "normalizations": [],
+        "normalizations": {
+            "weight normalization": []
+        },
+        "other layers": [],
         "transformers": []
     },
     "regularization": {
-        "augmentation": {
+        "augmentations": {
             "mixed-sampling": [],
             "automatic": []
         },
+        "consistency": [],
+        "knowledge-distillation": [],
         "intermediate-layer": []
     },
-    "contrastive-learning": [],
-    "weak-supervision": [],
-    "segmentation": {
-        "instance": [],
-        "semantic": []
+    "adversarial": {
+        "generative adversarial networks": {
+            "theory": [],
+            "wasserstein": [],
+            "maximum mean discrepancy": [],
+            "conditional/auxililary": [],
+            "image-to-image translation": [],
+            "other popular variants": []
+        }
+    },
+    "detection": {
+        "detectors": {
+            "one-stage": {
+                "yolo": [],
+                "retinanet": [],
+                "anchor-free": []
+            },
+            "two-stage": {
+                "rcnn": []
+            },
+            "transformers": []
+        },
+        "segmentation": {
+            "instance": [],
+            "semantic": [],
+            "panoptic": []
+        },
+        "weakly-supervised learning": [],
+        "applied": [],
+        "anchor boxes": [],
+        "salient object detection": []
+    },
+    "contrastive learning": [],
+    "semi-supervised learning": {
+        "pseudo-labeling": []
+    },
+    "transfer learning": [],
+    "weakly-supervised learning": [],
+    "x-shot learning": {
+        "few-shot learning": [],
+        "one-shot learning": [],
+        "zero-shot learning": []
+    },
+    "differential evolution": [],
+    "low-level visual processing": {
+        "correspondence": [],
+        "feature matching": [],
+        "descriptors": []
+    },
+    "statistics": {
+        "markov chains": {
+            "monte-carlo": []
+        }
     },
     "no-category": []
 }
