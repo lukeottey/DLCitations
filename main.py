@@ -7,8 +7,6 @@ from functools import partial
 from ordered_set import OrderedSet
 from collections import namedtuple
 
-from abbrev import ABBREV_MAP
-
 
 _TEX_IN = """\\documentclass[acmlarge]{acmart}
 \\AtBeginDocument{%
@@ -28,8 +26,10 @@ Luke Ottey
 \\newpage"""
 
 
-
 class TexRelatedFileNotFound(Exception):
+    ...
+
+class AbbreviationAlreadyExists(Exception):
     ...
 
 
@@ -40,11 +40,25 @@ class CitedItem(namedtuple("CitedItem", "id title location")):
     def __repr__(self):
         return f"{self.title} [{self.id}]"
 
+    def __str__(self):
+        return super().__repr__()
+
+class CitationNotUnderstood(Exception):
+    def __init__(self, citation: CitedItem, msg: str):
+        super().__init__()
+        self.citation_str = str(citation)
+        self.msg = msg 
+
+    def __str__(self):
+        return f"\n[{self.citation_str}]:\n-------------{self.msg}"
+
 def parse_args():
-    def path_fixer(p, suffix, must_exist):
-        if not p.startswith("tex_stuff/"):
-            p = f"tex_stuff/{p}"
-        assert p.count("/") == 1, p
+    def path_fixer(p, suffix, must_exist, folder=None):
+        if folder is not None:
+            folder = folder.replace("/", "")
+            if not p.startswith(f"{folder}/"):
+                p = f"{folder}/{p}"
+            assert p.count("/") == 1, p
         
         if not p.endswith(suffix):
             p = f"{p}{suffix}"
@@ -55,36 +69,41 @@ def parse_args():
  
     p = argparse.ArgumentParser()
     p.add_argument("-b", "--bibfile", type=partial(path_fixer, suffix=".bib", must_exist=True), default="bibliography")
-    p.add_argument("-f", "--fout", type=partial(path_fixer, suffix=".tex", must_exist=False), default="core")
+    p.add_argument("-f", "--fout", type=partial(path_fixer, suffix=".tex", must_exist=False, folder="tex_stuff"), default="core")
     p.add_argument("-t", "--toc", type=partial(path_fixer, suffix=".json", must_exist=True), default="toc")
+    p.add_argument("-a", "--abbrev", type=partial(path_fixer, suffix=".json", must_exist=True), default="abbrevs")
+
     p.add_argument("-k", "--key", type=str, default="none")
     return p.parse_args()
 
 
 class IterBibTex:
-    def __init__(self, bibpath, allowed_keys):
+    def __init__(self, bibpath, allowed_keys, abbr_map):
         self.bibpath = bibpath
         self.allowed_keys = allowed_keys
+        self.abbr_map = abbr_map
 
     def __iter__(self):
         with open(self.bibpath) as bibfile:
             bibs = bibtexparser.load(bibfile)
         for bt in bibs.entries:
-            locs = list(map(lambda loc: "::".join([ABBREV_MAP.get(_k, _k) for _k in loc.split("::")]), bt.get("keywords", "no-category").split(","))) 
+            locs = list(map(lambda loc: "::".join([self.abbr_map.get(_k, _k) for _k in loc.split("::")]), bt.get("keywords", "no-category").split(","))) 
+            item = CitedItem(id=bt["ID"], location=tuple(locs), title=bt["title"]) 
             for loc in locs:
-                assert any(key.startswith(loc) for key in self.allowed_keys), loc
-            yield CitedItem(
-                id=bt["ID"], location=tuple(locs), title=bt["title"]) 
+                if not any(key.startswith(loc) for key in self.allowed_keys):
+                    raise CitationNotUnderstood(item, f"keyword '{loc}' not allowed.")
+            yield item
 
 
 class CitationsMap:
-    def __init__(self, allowed_keys):
+    def __init__(self, allowed_keys, abbr_map):
         self.__d = dict()
         for k in allowed_keys:
             self.__d[k] = OrderedSet()
+        self.abbr_map = abbr_map
 
     def _check_key(self, k):
-        k = "::".join([ABBREV_MAP.get(_k, _k) for _k in k.split("::")])  
+        k = "::".join([self.abbr_map.get(_k, _k) for _k in k.split("::")])  
         if k in self.__d:
             return k
         if not any(key.startswith(k) for key in list(self.__d)):
@@ -115,7 +134,7 @@ class CitationsMap:
         return tuple(self.__d)
 
     @classmethod
-    def from_json(cls, path):
+    def from_json(cls, path, abbr_map):
         with open(path, "r") as toc:
             cats_json = json.load(toc)
         nested_cats = []
@@ -130,7 +149,7 @@ class CitationsMap:
                 else:
                     inner(v, prefix_cat + (k,))
         inner(cats_json)
-        return cls(nested_cats)
+        return cls(nested_cats, abbr_map)
 
     def __iter__(self):
         for k in self.toc():
@@ -188,6 +207,17 @@ def fill_tex_body(cite_map):
     return list(tex_body)
 
 
+def load_abbreviations(path):
+    abbr_map = bidict()
+    with open(path, "r") as f:
+        abbrevs = json.load(f)
+    for k, v in abbrevs.items():
+        if k in abbr_map or k in abbr_map.inv or v in abbr_map or v in abbr_map.inv:
+            raise AbbreviationAlreadyExists(f"{k}: {v}")
+        abbr_map[k] = v 
+    return abbr_map
+
+
 def main():
     args = parse_args()
 
@@ -198,8 +228,10 @@ def main():
         if not os.path.exists(path):
             raise TexRelatedFileNotFound(path)
 
-    cite_map = CitationsMap.from_json(args.toc)
-    bibtex_iter = IterBibTex(args.bibfile, tuple(cite_map.toc()))
+    abbr_map = load_abbreviations(args.abbrev)
+    cite_map = CitationsMap.from_json(args.toc, dict(abbr_map.items()))
+
+    bibtex_iter = IterBibTex(args.bibfile, tuple(cite_map.toc()), dict(abbr_map.items()))
     for citation in iter(bibtex_iter):
         cite_map.add(citation)
     
@@ -211,8 +243,7 @@ def main():
     else:
         tex_code = _TEX_IN.split("\n") + fill_tex_body(cite_map) + \
             ["\\newpage", "\\bibliographystyle{ACM-Reference-Format}"] + \
-                ["\\bibliography{" + args.bibfile[args.bibfile.index("/") + 1: args.bibfile.index(".")] + "}", "\\end{document}"]
-
+                ["\\bibliography{" + args.bibfile + "}", "\\end{document}"]
         with open(args.fout, "w") as fout:
             fout.write("\n".join(tex_code))
         print(f"\nWritten to LaTeX file {args.fout}\n")

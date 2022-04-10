@@ -7,11 +7,12 @@
             "inception-style": [],
             "drop-in and add-on components": []
         },
-        "model-scaling": [],
-        "activations": [],
-        "normalizations": {
-            "weight normalization": []
+        "efficiency-oriented": {
+            "mobile vision": [],
+            "model scaling": []
         },
+        "attention mechanisms": [],
+        "neural architecture search": [],
         "other layers": [],
         "transformers": []
     },
@@ -22,7 +23,18 @@
         },
         "consistency": [],
         "knowledge-distillation": [],
-        "intermediate-layer": []
+        "intermediate-layer": [],
+        "pseudo-labeling": []
+    },
+    "activation": {
+        "layers": []        
+    },
+    "normalization": {
+        "layers": [],
+        "self-normalization": []
+    },
+    "autoencoders": {
+        "variational": []
     },
     "adversarial": {
         "generative adversarial networks": {
@@ -46,12 +58,15 @@
             },
             "transformers": []
         },
+        "backbones": [],
+        "anchor box assignment": [],
         "segmentation": {
             "instance": [],
             "semantic": [],
             "panoptic": []
         },
         "weakly-supervised learning": [],
+        "semi-supervised learning": [],
         "applied": [],
         "anchor boxes": [],
         "salient object detection": []
@@ -60,8 +75,13 @@
     "semi-supervised learning": {
         "pseudo-labeling": []
     },
+    "representation learning": {
+        "contrastive learning": []
+    },
+    "unsupervised learning": [],
     "transfer learning": [],
     "weakly-supervised learning": [],
+    "metric learning": [],
     "x-shot learning": {
         "few-shot learning": [],
         "one-shot learning": [],
@@ -73,10 +93,15 @@
         "feature matching": [],
         "descriptors": []
     },
+    "pruning & compression": [],
+    "theory of universal approximation": [],
+    "clustering": [],
     "statistics": {
         "markov chains": {
             "monte-carlo": []
         }
     },
+    "surveys": [],
+    "frameworks & code-bases": [],
     "no-category": []
 }

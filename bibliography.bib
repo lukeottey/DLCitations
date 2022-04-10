@@ -44,7 +44,7 @@
   author={Tim Salimans and Diederik P. Kingma},
   booktitle={NIPS},
   year={2016},
-  keywords={arch::norm::weight normalization}
+  keywords={norm}
 }
 @article{Tian2020WhatMF,
   title={What makes for good views for contrastive learning},
@@ -139,7 +139,7 @@
   journal={ArXiv},
   year={2020},
   volume={abs/2010.12023},
-  keywords={od::wsl,reg::kd}
+  keywords={od::wsl,reg::kd,repl}
 }
 @article{Chen2021RobustAA,
   title={Robust and Accurate Object Detection via Adversarial Learning},
@@ -156,7 +156,7 @@
   year={2011},
   volume={15},
   pages={4-31},
-  keywords={de}
+  keywords={de,surv}
 }
 @article{Storn1997DifferentialE,
   title={Differential Evolution – A Simple and Efficient Heuristic for global Optimization over Continuous Spaces},
@@ -201,7 +201,8 @@
   author={James K. Reed and Zach DeVito and Horace He and Ansley Ussery and Jason Ansel},
   journal={ArXiv},
   year={2021},
-  volume={abs/2112.08429}
+  volume={abs/2112.08429},
+  keywords={code}
 }
 @article{Kumar2019VerifiedUC,
   title={Verified Uncertainty Calibration},
@@ -237,81 +238,92 @@
   author={Vighnesh Birodkar and Zhichao Lu and Siyang Li and Vivek Rathod and Jonathan Huang},
   journal={2021 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2021},
-  pages={6995-7005}
+  pages={6995-7005},
+  keywords={od::seg}
 }
 @article{Khan2022TransformersIV,
   title={Transformers in Vision: A Survey},
   author={Salman Hameed Khan and Muzammal Naseer and Munawar Hayat and Syed Waqas Zamir and Fahad Shahbaz Khan and Mubarak Shah},
   journal={ACM Computing Surveys (CSUR)},
   year={2022},
-  keywords={arch::tr}
+  keywords={arch::tr,surv}
 }
 @article{Mller2021TrivialAugmentTY,
   title={TrivialAugment: Tuning-free Yet State-of-the-Art Data Augmentation},
   author={Samuel M{\"u}ller and Frank Hutter},
   journal={2021 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2021},
-  pages={754-762}
+  pages={754-762},
+  keywords={reg::aug}
 }
 @article{Liu2021UnbiasedTF,
   title={Unbiased Teacher for Semi-Supervised Object Detection},
   author={Yen-Cheng Liu and Chih-Yao Ma and Zijian He and Chia-Wen Kuo and Kan Chen and Peizhao Zhang and Bichen Wu and Zsolt Kira and P{\'e}ter Vajda},
   journal={ArXiv},
   year={2021},
-  volume={abs/2102.09480}
+  volume={abs/2102.09480},
+  keywords={ssl,od::ssl,reg::kd}
 }
 @article{Gidaris2018UnsupervisedRL,
   title={Unsupervised Representation Learning by Predicting Image Rotations},
   author={Spyros Gidaris and Praveer Singh and Nikos Komodakis},
   journal={ArXiv},
   year={2018},
-  volume={abs/1803.07728}
+  volume={abs/1803.07728},
+  keywords={repl,reg::aug}
 }
 @inproceedings{Wang2020UnderstandingCR,
   title={Understanding Contrastive Representation Learning through Alignment and Uniformity on the Hypersphere},
   author={Tongzhou Wang and Phillip Isola},
   booktitle={ICML},
-  year={2020}
+  year={2020},
+  keywords={repl::cl}
 }
 @article{Wong2016UnderstandingDA,
   title={Understanding Data Augmentation for Classification: When to Warp?},
   author={Sebastien C. Wong and Adam Gatt and Victor Stamatescu and Mark D. McDonnell},
   journal={2016 International Conference on Digital Image Computing: Techniques and Applications (DICTA)},
   year={2016},
-  pages={1-6}
+  pages={1-6},
+  keywords={reg::aug}
 }
 @article{Lenc2015UnderstandingIR,
   title={Understanding image representations by measuring their equivariance and equivalence},
   author={Karel Lenc and Andrea Vedaldi},
   journal={2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2015},
-  pages={991-999}
+  pages={991-999},
+  keywords={repl}
 }
 @article{Xie2020UnsupervisedDA,
   title={Unsupervised Data Augmentation for Consistency Training},
   author={Qizhe Xie and Zihang Dai and Eduard H. Hovy and Minh-Thang Luong and Quoc V. Le},
   journal={arXiv: Learning},
-  year={2020}
+  year={2020},
+  keywords={reg::con}
 }
 @article{Wu2018UnsupervisedFL,
   title={Unsupervised Feature Learning via Non-parametric Instance Discrimination},
   author={Zhirong Wu and Yuanjun Xiong and Stella X. Yu and Dahua Lin},
   journal={2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2018},
-  pages={3733-3742}
+  pages={3733-3742},
+  keywords={repl}
 }
 @inproceedings{Chen2019UnsupervisedOS,
   title={Unsupervised Object Segmentation by Redrawing},
   author={Micka{\"e}l Chen and Thierry Arti{\`e}res and Ludovic Denoyer},
   booktitle={NeurIPS},
-  year={2019}
+  year={2019},
+  keywords={od::seg,repl}
 }
 @article{Doersch2015UnsupervisedVR,
   title={Unsupervised Visual Representation Learning by Context Prediction},
   author={Carl Doersch and Abhinav Kumar Gupta and Alexei A. Efros},
   journal={2015 IEEE International Conference on Computer Vision (ICCV)},
   year={2015},
-  pages={1422-1430}
+  pages={1422-1430},
+  keywords={repl}
 }
 @inproceedings{Lakshminarayanan2017SimpleAS,
   title={Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles},
@@ -323,14 +335,16 @@
   title={Spatial Transformer Networks},
   author={Max Jaderberg and Karen Simonyan and Andrew Zisserman and Koray Kavukcuoglu},
   booktitle={NIPS},
-  year={2015}
+  year={2015},
+  keywords={arch::tr}
 }
 @article{Du2020SpineNetLS,
   title={SpineNet: Learning Scale-Permuted Backbone for Recognition and Localization},
   author={Xianzhi Du and Tsung-Yi Lin and Pengchong Jin and Golnaz Ghiasi and Mingxing Tan and Yin Cui and Quoc V. Le and Xiaodan Song},
   journal={2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2020},
-  pages={11589-11598}
+  pages={11589-11598},
+  keywords={od::bne}
 }
 @article{Anwar2017StructuredPO,
   title={Structured Pruning of Deep Convolutional Neural Networks},
@@ -338,98 +352,112 @@
   journal={ACM Journal on Emerging Technologies in Computing Systems (JETC)},
   year={2017},
   volume={13},
-  pages={1 - 18}
+  pages={1 - 18},
+  keywords={comp}
 }
 @article{Khosla2020SupervisedCL,
   title={Supervised Contrastive Learning},
   author={Prannay Khosla and Piotr Teterwak and Chen Wang and Aaron Sarna and Yonglong Tian and Phillip Isola and Aaron Maschinot and Ce Liu and Dilip Krishnan},
   journal={ArXiv},
   year={2020},
-  volume={abs/2004.11362}
+  volume={abs/2004.11362},
+  keywords={cl}
 }
 @article{Zhai2019S4LSS,
   title={S4L: Self-Supervised Semi-Supervised Learning},
   author={Xiaohua Zhai and Avital Oliver and Alexander Kolesnikov and Lucas Beyer},
   journal={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2019},
-  pages={1476-1485}
+  pages={1476-1485},
+  keywords={repl,ssl}
 }
 @article{Ma2018ShuffleNetVP,
   title={ShuffleNet V2: Practical Guidelines for Efficient CNN Architecture Design},
   author={Ningning Ma and Xiangyu Zhang and Haitao Zheng and Jian Sun},
   journal={ArXiv},
   year={2018},
-  volume={abs/1807.11164}
+  volume={abs/1807.11164},
+  keywords={arch::efficiency-oriented}
 }
 @article{Wang2020SideAwareBL,
   title={Side-Aware Boundary Localization for More Precise Object Detection},
   author={Jiaqi Wang and Wenwei Zhang and Yuhang Cao and Kai Chen and Jiangmiao Pang and Tao Gong and Jianping Shi and Chen Change Loy and Dahua Lin},
   journal={ArXiv},
   year={2020},
-  volume={abs/1912.04260}
+  volume={abs/1912.04260},
+  keywords={od}
 }
 @article{Ghiasi2021SimpleCI,
   title={Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation},
   author={Golnaz Ghiasi and Yin Cui and A. Srinivas and Rui Qian and Tsung-Yi Lin and Ekin Dogus Cubuk and Quoc V. Le and Barret Zoph},
   journal={2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2021},
-  pages={2917-2927}
+  pages={2917-2927},
+  keywords={od::seg::instance,reg::aug}
 }
 @article{Klambauer2017SelfNormalizingNN,
   title={Self-Normalizing Neural Networks},
   author={G{\"u}nter Klambauer and Thomas Unterthiner and Andreas Mayr and Sepp Hochreiter},
   journal={ArXiv},
   year={2017},
-  volume={abs/1706.02515}
+  volume={abs/1706.02515},
+  keywords={norm::self-normalization}
 }
 @article{Misra2020SelfSupervisedLO,
   title={Self-Supervised Learning of Pretext-Invariant Representations},
   author={Ishan Misra and Laurens van der Maaten},
   journal={2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2020},
-  pages={6706-6716}
+  pages={6706-6716},
+  keywords={repl}
 }
 @article{Wang2020SelfSupervisedEA,
   title={Self-Supervised Equivariant Attention Mechanism for Weakly Supervised Semantic Segmentation},
   author={Yude Wang and Jie Zhang and Meina Kan and S. Shan and Xilin Chen},
   journal={2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2020},
-  pages={12272-12281}
+  pages={12272-12281},
+  keywords={od::seg,od::wsl,arch::attn}
 }
 @article{Zhou2020LookIntoObjectSS,
   title={Look-Into-Object: Self-Supervised Structure Modeling for Object Recognition},
   author={Mohan Zhou and Yalong Bai and Wei Zhang and Tiejun Zhao and Tao Mei},
   journal={2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2020},
-  pages={11771-11780}
+  pages={11771-11780},
+  keywords={repl}
 }
 @article{Brabandere2017SemanticIS,
   title={Semantic Instance Segmentation with a Discriminative Loss Function},
   author={Bert De Brabandere and Davy Neven and Luc Van Gool},
   journal={ArXiv},
   year={2017},
-  volume={abs/1708.02551}
+  volume={abs/1708.02551},
+  keywords={od::seg::instance}
 }
 @article{Niu2021SPICESP,
   title={SPICE: Semantic Pseudo-labeling for Image Clustering},
   author={Chuang Niu and Ge Wang},
   journal={ArXiv},
   year={2021},
-  volume={abs/2103.09382}
+  volume={abs/2103.09382},
+  keywords={reg::pseudo,clustering}
 }
 @article{Han2021RethinkingCD,
   title={Rethinking Channel Dimensions for Efficient Model Design},
   author={Dongyoon Han and Sangdoo Yun and Byeongho Heo and Young Joon Yoo},
   journal={2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2021},
-  pages={732-741}
+  pages={732-741},
+  keywords={arch::efficiency-oriented}
 }
 @article{Chen2021RobustAA,
   title={Robust and Accurate Object Detection via Adversarial Learning},
   author={Xiangning Chen and Cihang Xie and Mingxing Tan and Li Zhang and Cho-Jui Hsieh and Boqing Gong},
   journal={2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2021},
-  pages={16617-16626}
+  pages={16617-16626},
+  keywords={od,adv}
 }
 @article{Foret2021SharpnessAwareMF,
   title={Sharpness-Aware Minimization for Efficiently Improving Generalization},
@@ -443,7 +471,8 @@
   author={Yanghao Li and Yuntao Chen and Naiyan Wang and Zhaoxiang Zhang},
   journal={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2019},
-  pages={6053-6062}
+  pages={6053-6062},
+  keywords={arch::efficiency-oriented::model scaling}
 }
 @article{Li2019SelectiveKN,
   title={Selective Kernel Networks},
@@ -471,55 +500,63 @@
   author={Yuxin Wu and Justin Johnson},
   journal={ArXiv},
   year={2021},
-  volume={abs/2105.07576}
+  volume={abs/2105.07576},
+  keywords={norm}
 }
 @article{Bello2021RevisitingRI,
   title={Revisiting ResNets: Improved Training and Scaling Strategies},
   author={Irwan Bello and William Fedus and Xianzhi Du and Ekin Dogus Cubuk and A. Srinivas and Tsung-Yi Lin and Jonathon Shlens and Barret Zoph},
   journal={ArXiv},
   year={2021},
-  volume={abs/2103.07579}
+  volume={abs/2103.07579},
+  keywords={arch}
 }
 @article{Wang2019RegionPB,
   title={Region Proposal by Guided Anchoring},
   author={Jiaqi Wang and Kai Chen and Shuo Yang and Chen Change Loy and Dahua Lin},
   journal={2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2019},
-  pages={2960-2969}
+  pages={2960-2969},
+  keywords={od::aaa}
 }
 @article{Oord2018RepresentationLW,
   title={Representation Learning with Contrastive Predictive Coding},
   author={A{\"a}ron van den Oord and Yazhe Li and Oriol Vinyals},
   journal={ArXiv},
   year={2018},
-  volume={abs/1807.03748}
+  volume={abs/1807.03748},
+  keywords={repl::cl}
 }
 @article{Zhang2020ResNeStSN,
   title={ResNeSt: Split-Attention Networks},
   author={Hang Zhang and Chongruo Wu and Zhongyue Zhang and Yi Zhu and Zhi-Li Zhang and Haibin Lin and Yue Sun and Tong He and Jonas Mueller and R. Manmatha and Mu Li and Alex Smola},
   journal={ArXiv},
   year={2020},
-  volume={abs/2004.08955}
+  volume={abs/2004.08955},
+  keywords={arch}
 }
 @article{Li2018ResearchOA,
   title={Research on a Surface Defect Detection Algorithm Based on MobileNet-SSD},
   author={Yiting Li and Haisong Huang and Qingsheng Xie and Liguo Yao and Qipeng Chen},
   journal={Applied Sciences},
-  year={2018}
+  year={2018},
+  keywords={od::applied}
 }
 @article{Kim2020ProbabilisticAA,
   title={Probabilistic Anchor Assignment with IoU Prediction for Object Detection},
   author={Kang-jik Kim and Hee Seok Lee},
   journal={ArXiv},
   year={2020},
-  volume={abs/2007.08103}
+  volume={abs/2007.08103},
+  keywords={od::aaa}
 }
 @article{Lee2020CenterMaskRA,
   title={CenterMask: Real-Time Anchor-Free Instance Segmentation},
   author={Youngwan Lee and Jongyoul Park},
   journal={2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
   year={2020},
-  pages={13903-13912}
+  pages={13903-13912},
+  keywords={od::det::one-stage::anchor-free,od::seg::instance}
 }
 @article{Shi2016RealTimeSI,
   title={Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network},
@@ -4385,7 +4422,7 @@
   journal={ArXiv},
   year={2018},
   volume={abs/1710.05941},
-  keywords={architectures::activations}
+  keywords={act,arch::nas}
 }
 
 @article{Singh2016SwapoutLA,
