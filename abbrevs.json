@@ -8,6 +8,9 @@
     "attn": "attention mechanisms",
     "uat": "theory of universal approximation",
     "aaa": "anchor box assignment",
+    "dimred": "dimensionality reduction",
+    "math": "mathematics",
+    "top": "topology",
     "tr": "transformers",
     "cl": "contrastive learning",
     "kd": "knowledge-distillation",
@@ -25,6 +28,7 @@
     "osl": "one-shot learning",
     "zsl": "zero-shot learning",
     "metl": "metric learning",
+    "mfdl": "manifold learning",
     "ft": "fine-tuning",
     "od": "detection",
     "det": "detectors",
@@ -44,5 +48,8 @@
     "ner": "perception and the visual cortex",
     "de": "differential evolution",
     "llvp": "low-level visual processing",
-    "stat": "statistics"
+    "stat": "statistics",
+    "caux": "conditional/auxiliary",
+    "gm": "generative modeling",
+    "ua": "unassigned"
 }

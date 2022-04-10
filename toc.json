@@ -33,16 +33,20 @@
         "layers": [],
         "self-normalization": []
     },
-    "autoencoders": {
-        "variational": []
-    },
-    "adversarial": {
+    "adversarial": [],
+    "generative modeling": {
+        "theory": [],
+        "autoencoders": {
+            "variational": [],
+            "theory": []
+        },
         "generative adversarial networks": {
             "theory": [],
             "wasserstein": [],
             "maximum mean discrepancy": [],
-            "conditional/auxililary": [],
+            "conditional/auxiliary": [],
             "image-to-image translation": [],
+            "style": [],
             "other popular variants": []
         }
     },
@@ -81,6 +85,7 @@
     "unsupervised learning": [],
     "transfer learning": [],
     "weakly-supervised learning": [],
+    "manifold learning": [],
     "metric learning": [],
     "x-shot learning": {
         "few-shot learning": [],
@@ -93,9 +98,21 @@
         "feature matching": [],
         "descriptors": []
     },
-    "pruning & compression": [],
+    "dimensionality reduction": {
+        "pruning & compression": []
+    },
     "theory of universal approximation": [],
     "clustering": [],
+    "mathematics": {
+        "group theory": {
+            "Lie groups": []
+        },
+        "topology": {
+            "smooth manifolds": []
+        },
+        "banach spaces": [],
+        "optimal transport": []
+    },
     "statistics": {
         "markov chains": {
             "monte-carlo": []
@@ -103,5 +120,6 @@
     },
     "surveys": [],
     "frameworks & code-bases": [],
+    "unassigned": [],
     "no-category": []
 }

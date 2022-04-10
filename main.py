@@ -242,7 +242,7 @@ def main():
             print(item.to_latex(), "\n")
     else:
         tex_code = _TEX_IN.split("\n") + fill_tex_body(cite_map) + \
-            ["\\newpage", "\\bibliographystyle{ACM-Reference-Format}"] + \
+            ["\\bibliographystyle{ACM-Reference-Format}"] + \
                 ["\\bibliography{" + args.bibfile + "}", "\\end{document}"]
         with open(args.fout, "w") as fout:
             fout.write("\n".join(tex_code))
